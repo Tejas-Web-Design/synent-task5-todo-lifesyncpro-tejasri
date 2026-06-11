@@ -157,7 +157,11 @@ LifeSync Pro automatically calculates:
 * Goal Progress
 
 ---
+##  Live Preview
 
+https://todo-lifesync-pro-task-management.netlify.app/
+
+----
 
 ## 🔒 Data Persistence
 
