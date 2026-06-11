@@ -1,0 +1,669 @@
+
+/* =========================================
+   SETTINGS PAGE - LifeSync Pro
+========================================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+
+--primary:#2563eb;
+--primary-dark:#1d4ed8;
+
+--success:#22c55e;
+--danger:#ef4444;
+
+--bg:#f8fafc;
+--card:#ffffff;
+
+--text:#0f172a;
+--text-light:#64748b;
+
+--border:#e2e8f0;
+
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+background:#f1f5f9;
+color:var(--text);
+min-height:100vh;
+
+}
+
+/* =========================================
+   LAYOUT
+========================================= */
+
+.settings-dashboard{
+
+display:grid;
+grid-template-columns:280px 1fr;
+
+min-height:100vh;
+
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar{
+
+background:#0f172a;
+
+padding:25px;
+
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+font-size:1.5rem;
+font-weight:700;
+
+color:#60a5fa;
+
+margin-bottom:40px;
+
+}
+
+.menu{
+
+display:flex;
+flex-direction:column;
+gap:12px;
+
+}
+
+.menu a{
+
+text-decoration:none;
+
+color:white;
+
+padding:14px 16px;
+
+border-radius:14px;
+
+display:flex;
+align-items:center;
+gap:12px;
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+background:rgba(255,255,255,.08);
+
+transform:translateX(6px);
+
+}
+
+.menu a.active{
+
+background:var(--primary);
+
+}
+
+#logoutBtn{
+
+border:none;
+
+background:#ef4444;
+
+color:white;
+
+padding:14px;
+
+border-radius:14px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#logoutBtn:hover{
+
+transform:translateY(-3px);
+
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content{
+
+padding:35px;
+
+background:#f1f5f9;
+
+}
+
+/* HEADER */
+
+.page-header{
+
+background:white;
+
+padding:30px;
+
+border-radius:24px;
+
+margin-bottom:25px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.page-header h1{
+
+font-size:2rem;
+
+margin-bottom:8px;
+
+}
+
+.page-header p{
+
+color:var(--text-light);
+
+}
+
+/* =========================================
+   SETTINGS CARD
+========================================= */
+
+.settings-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:24px;
+
+margin-bottom:25px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.05);
+
+transition:.3s;
+
+}
+
+.settings-card:hover{
+
+transform:translateY(-4px);
+
+}
+
+.settings-card h2{
+
+color:var(--primary);
+
+margin-bottom:25px;
+
+}
+
+/* =========================================
+   PROFILE IMAGE
+========================================= */
+
+.profile-upload{
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+margin-bottom:30px;
+
+}
+
+.profile-upload img{
+
+width:150px;
+height:150px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid var(--primary);
+
+box-shadow:
+0 10px 25px rgba(37,99,235,.25);
+
+}
+
+.upload-btn{
+
+margin-top:15px;
+
+padding:12px 20px;
+
+background:var(--primary);
+
+color:white;
+
+border-radius:12px;
+
+cursor:pointer;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.upload-btn:hover{
+
+background:var(--primary-dark);
+
+transform:translateY(-2px);
+
+}
+
+#profileImage{
+
+display:none;
+
+}
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.form-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:20px;
+
+}
+
+.input-group{
+
+display:flex;
+flex-direction:column;
+
+}
+
+.input-group label{
+
+margin-bottom:8px;
+
+font-weight:600;
+
+}
+
+.input-group input,
+.input-group select{
+
+height:55px;
+
+padding:0 16px;
+
+border:1px solid var(--border);
+
+border-radius:14px;
+
+font-size:1rem;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+.input-group input:focus,
+.input-group select:focus{
+
+border-color:var(--primary);
+
+box-shadow:
+0 0 0 4px rgba(37,99,235,.1);
+
+}
+
+/* =========================================
+   SAVE BUTTON
+========================================= */
+
+.save-btn{
+
+width:100%;
+
+margin-top:25px;
+
+padding:15px;
+
+border:none;
+
+border-radius:14px;
+
+background:
+linear-gradient(
+135deg,
+#2563eb,
+#3b82f6
+);
+
+color:white;
+
+font-size:1rem;
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.save-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 10px 20px rgba(37,99,235,.25);
+
+}
+
+/* =========================================
+   THEME
+========================================= */
+
+.theme-box{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:20px;
+
+background:#f8fafc;
+
+border-radius:18px;
+
+}
+
+.switch{
+
+position:relative;
+
+width:65px;
+height:34px;
+
+}
+
+.switch input{
+
+display:none;
+
+}
+
+.slider{
+
+position:absolute;
+
+top:0;
+left:0;
+right:0;
+bottom:0;
+
+background:#cbd5e1;
+
+border-radius:40px;
+
+cursor:pointer;
+
+transition:.4s;
+
+}
+
+.slider::before{
+
+content:"";
+
+position:absolute;
+
+width:26px;
+height:26px;
+
+left:4px;
+top:4px;
+
+background:white;
+
+border-radius:50%;
+
+transition:.4s;
+
+}
+
+input:checked + .slider{
+
+background:#2563eb;
+
+}
+
+input:checked + .slider::before{
+
+transform:translateX(31px);
+
+}
+
+/* =========================================
+   ACCOUNT INFO
+========================================= */
+
+.account-info{
+
+display:grid;
+
+grid-template-columns:
+1fr 1fr;
+
+gap:20px;
+
+}
+
+.account-info p{
+
+padding:18px;
+
+background:#f8fafc;
+
+border-radius:16px;
+
+}
+
+/* =========================================
+   DANGER CARD
+========================================= */
+
+.danger-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:24px;
+
+border-left:5px solid #ef4444;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.danger-card h2{
+
+color:#ef4444;
+
+margin-bottom:12px;
+
+}
+
+.danger-card p{
+
+margin-bottom:20px;
+
+color:var(--text-light);
+
+}
+
+#deleteAccountBtn{
+
+background:#ef4444;
+
+border:none;
+
+color:white;
+
+padding:14px 24px;
+
+border-radius:12px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+#deleteAccountBtn:hover{
+
+background:#dc2626;
+
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark{
+
+background:#0f172a;
+color:white;
+
+}
+
+body.dark .main-content{
+
+background:#0f172a;
+
+}
+
+body.dark .page-header,
+body.dark .settings-card,
+body.dark .danger-card{
+
+background:#1e293b;
+color:white;
+
+}
+
+body.dark .input-group input,
+body.dark .input-group select{
+
+background:#334155;
+color:white;
+border-color:#475569;
+
+}
+
+body.dark .account-info p{
+
+background:#334155;
+
+}
+
+body.dark .theme-box{
+
+background:#334155;
+
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:900px){
+
+.settings-dashboard{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.main-content{
+
+padding:20px;
+
+}
+
+.account-info{
+
+grid-template-columns:1fr;
+
+}
+
+.theme-box{
+
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.form-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.page-header h1{
+
+font-size:1.6rem;
+
+}
+
+.settings-card,
+.danger-card{
+
+padding:20px;
+
+}
+
+}
