@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dashboard | LifeSync Pro</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <!-- SIDEBAR -->
+
+      <aside class="sidebar">
+        <div>
+          <div class="logo">
+            <i class="fa-solid fa-bolt"></i>
+
+            <span>LifeSync Pro</span>
+          </div>
+
+          <div class="user-card">
+            <div class="avatar">
+              <img
+                id="profileAvatar"
+                src="../assets/propic.png"
+                alt="Profile"
+              />
+            </div>
+
+            <h3 id="sidebarName">User</h3>
+
+            <p id="sidebarProfession">Profession</p>
+          </div>
+
+          <nav class="menu">
+            <a href="dashboard.html" class="active">
+              <i class="fa-solid fa-house"></i>
+
+              Dashboard
+            </a>
+
+            <a href="tasks.html">
+              <i class="fa-solid fa-list-check"></i>
+
+              Tasks
+            </a>
+
+            <a href="analytics.html">
+              <i class="fa-solid fa-chart-line"></i>
+
+              Analytics
+            </a>
+
+            <a href="profile.html">
+              <i class="fa-solid fa-user"></i>
+
+              Profile
+            </a>
+
+            <a href="settings.html">
+              <i class="fa-solid fa-gear"></i>
+
+              Settings
+            </a>
+          </nav>
+        </div>
+
+        <button id="logoutBtn">
+          <i class="fa-solid fa-right-from-bracket"></i>
+
+          Logout
+        </button>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+
+      <main class="main-content">
+        <!-- HERO -->
+
+        <section class="hero-card">
+          <div>
+            <h1 id="welcomeUser">Welcome Back 👋</h1>
+
+            <p id="professionBadge">Developer</p>
+
+            <span id="todayDate"></span>
+          </div>
+
+          <div class="hero-progress">
+            <div class="circle">
+              <span id="progressPercent"> 0% </span>
+            </div>
+
+            <p>Today's Progress</p>
+          </div>
+        </section>
+
+        <!-- STATS -->
+
+        <section class="stats-grid">
+          <div class="stat-card">
+            <i class="fa-solid fa-list-check"></i>
+
+            <div>
+              <h2 id="totalTasks">0</h2>
+
+              <p>Total Tasks</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <i class="fa-solid fa-circle-check"></i>
+
+            <div>
+              <h2 id="completedTasks">0</h2>
+
+              <p>Completed</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <i class="fa-solid fa-clock"></i>
+
+            <div>
+              <h2 id="pendingTasks">0</h2>
+
+              <p>Pending</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <i class="fa-solid fa-fire"></i>
+
+            <div>
+              <h2 id="streakCount">0</h2>
+
+              <p>Streak</p>
+            </div>
+          </div>
+        </section>
+        <section class="planner-section">
+          <div class="planner-header">
+            <h2>Build Better Habits Every Day 🚀</h2>
+
+            <p>Small actions repeated daily create extraordinary results.</p>
+          </div>
+
+          <!-- Slider -->
+
+          <div class="planner-slider">
+            <div class="slide active">
+              <img src="../assets/slider1.png" alt="Morning Routine" />
+
+              <div class="slide-content">
+                <h3>Start Your Day With Purpose</h3>
+
+                <p>
+                  Plan your day before distractions begin. A clear plan
+                  increases productivity and reduces stress.
+                </p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="../assets/slider2.png" alt="Focus" />
+
+              <div class="slide-content">
+                <h3>Focus On Important Work</h3>
+
+                <p>
+                  Complete high-priority tasks first and avoid multitasking.
+                </p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <img src="../assets/slider3.png" alt="Success" />
+
+              <div class="slide-content">
+                <h3>Consistency Builds Success</h3>
+
+                <p>Daily discipline beats occasional motivation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Habit Cards -->
+
+          <div class="habit-grid">
+            <div class="habit-card">
+              <i class="fa-solid fa-sun"></i>
+              <h4>Morning Planning</h4>
+              <p>Create a task list before starting work.</p>
+            </div>
+
+            <div class="habit-card">
+              <i class="fa-solid fa-bullseye"></i>
+              <h4>Stay Focused</h4>
+              <p>Work on one important task at a time.</p>
+            </div>
+
+            <div class="habit-card">
+              <i class="fa-solid fa-book"></i>
+              <h4>Learn Daily</h4>
+              <p>Spend 30 minutes learning new skills.</p>
+            </div>
+
+            <div class="habit-card">
+              <i class="fa-solid fa-bed"></i>
+              <h4>Rest Well</h4>
+              <p>Proper sleep improves productivity.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- RIGHT PANEL -->
+
+      <aside class="right-panel">
+        <div class="glass-card">
+          <h3>Today's Focus</h3>
+
+          <p id="focusText">Stay productive and finish your important tasks.</p>
+        </div>
+
+        <div class="glass-card">
+          <h3>Quick Summary</h3>
+
+          <p>
+            Completed:
+            <strong id="summaryCompleted"> 0 </strong>
+          </p>
+
+          <p>
+            Pending:
+            <strong id="summaryPending"> 0 </strong>
+          </p>
+        </div>
+
+        <div class="glass-card quote">
+          <h3>Motivation</h3>
+
+          <p>Small progress every day leads to big results.</p>
+        </div>
+      </aside>
+    </div>
+
+    <script type="module" src="../js/dashboard.js"></script>
+  </body>
+</html>

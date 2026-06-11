@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tasks | LifeSync Pro</title>
+
+    <link rel="stylesheet" href="../css/tasks.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="tasks-dashboard">
+      <!-- SIDEBAR -->
+
+      <aside class="sidebar">
+        <div>
+          <div class="logo">
+            <i class="fa-solid fa-bolt"></i>
+
+            <span>LifeSync Pro</span>
+          </div>
+
+          <div class="user-card">
+            <div class="avatar">
+              <img
+                id="profileAvatar"
+                src="../assets/propic.png"
+                alt="Profile"
+              />
+            </div>
+
+            <h3 id="userName">User Name</h3>
+
+            <p id="userProfession">Profession</p>
+          </div>
+
+          <nav class="menu">
+            <a href="dashboard.html">
+              <i class="fa-solid fa-house"></i>
+
+              Dashboard
+            </a>
+
+            <a href="tasks.html" class="active">
+              <i class="fa-solid fa-list-check"></i>
+
+              Tasks
+            </a>
+
+            <a href="analytics.html">
+              <i class="fa-solid fa-chart-line"></i>
+
+              Analytics
+            </a>
+
+            <a href="profile.html">
+              <i class="fa-solid fa-user"></i>
+
+              Profile
+            </a>
+
+            <a href="settings.html">
+              <i class="fa-solid fa-gear"></i>
+
+              Settings
+            </a>
+          </nav>
+        </div>
+
+        <button id="logoutBtn">
+          <i class="fa-solid fa-right-from-bracket"></i>
+
+          Logout
+        </button>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+
+      <main class="main-content">
+        <!-- PAGE HEADER -->
+
+        <section class="page-header">
+          <div>
+            <h1>Task Management 🚀</h1>
+
+            <p>Organize, track and complete your profession based tasks.</p>
+          </div>
+
+          <div class="date-box" id="todayDate"></div>
+        </section>
+
+        <!-- TASK STATS -->
+
+        <section class="task-stats">
+          <div class="stat-card">
+            <i class="fa-solid fa-list"></i>
+
+            <div>
+              <h2 id="totalTasks">0</h2>
+
+              <p>Total Tasks</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <i class="fa-solid fa-clock"></i>
+
+            <div>
+              <h2 id="pendingTasks">0</h2>
+
+              <p>Pending</p>
+            </div>
+          </div>
+
+          
+
+          <div class="stat-card">
+            <i class="fa-solid fa-circle-check"></i>
+
+            <div>
+              <h2 id="completedTasks">0</h2>
+
+              <p>Completed</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ADD TASK -->
+
+        <section class="task-controls">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter custom task..."
+          />
+
+          <select id="priority">
+            <option value="High">High Priority</option>
+
+            <option value="Medium">Medium Priority</option>
+
+            <option value="Low">Low Priority</option>
+          </select>
+
+          <button id="addTaskBtn">
+            <i class="fa-solid fa-plus"></i>
+
+            Add Task
+          </button>
+        </section>
+
+        <!-- SEARCH -->
+
+        <input
+          type="text"
+          id="searchTask"
+          class="search-task"
+          placeholder="Search task..."
+        />
+        <!-- TASK MANAGER -->
+
+        <section class="task-card">
+          <div class="task-top">
+            <h2>Today's Tasks</h2>
+          </div>
+
+          <!-- FILTERS -->
+
+          <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+
+            <button class="filter-btn" data-filter="active">Active</button>
+
+            <button class="filter-btn" data-filter="completed">
+              Completed
+            </button>
+          </div>
+
+          <!-- TASK LIST -->
+
+          <div id="taskList"></div>
+        </section>
+      </main>
+
+      <!-- RIGHT PANEL -->
+
+      <aside class="right-panel">
+        <div class="glass-card">
+          <h3>Today's Goal 🎯</h3>
+
+          <p>Complete at least 5 tasks and maintain your streak.</p>
+        </div>
+
+        <div class="glass-card">
+          <h3>Productivity Score</h3>
+
+          <div class="score" id="productivityScore">0%</div>
+        </div>
+
+        <div class="glass-card">
+          <h3>Achievements</h3>
+
+          <ul>
+            <li>🔥 Daily Streak</li>
+
+            <li>⚡ Task Master</li>
+
+            <li>🏆 Productivity Hero</li>
+          </ul>
+        </div>
+
+        <div class="glass-card quote">
+          <h3>Motivation</h3>
+
+          <p>Small progress every day leads to big achievements.</p>
+        </div>
+      </aside>
+    </div>
+
+    <script type="module" src="../js/tasks.js"></script>
+  </body>
+</html>

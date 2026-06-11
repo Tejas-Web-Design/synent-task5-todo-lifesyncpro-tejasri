@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Profile | LifeSync Pro</title>
+
+<link rel="stylesheet"
+href="../css/profile.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<div class="profile-dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div>
+
+            <div class="logo">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <span>LifeSync Pro</span>
+
+            </div>
+
+            <nav class="menu">
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+
+                </a>
+
+                <a href="tasks.html">
+
+                    <i class="fa-solid fa-list-check"></i>
+                    Tasks
+
+                </a>
+
+                <a href="analytics.html">
+
+                    <i class="fa-solid fa-chart-line"></i>
+                    Analytics
+
+                </a>
+
+                <a href="profile.html"
+                class="active">
+
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+
+                </a>
+
+                <a href="settings.html">
+
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+
+                </a>
+
+            </nav>
+
+        </div>
+
+        <button id="logoutBtn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+<section class="profile-header">
+
+    <div class="profile-avatar">
+
+        <img
+        id="profileImage"
+        src="../assets/propic.png"
+        alt="Profile">
+
+        <label
+        for="profileUpload"
+        class="upload-btn">
+
+            <i class="fa-solid fa-camera"></i>
+
+        </label>
+
+        <input
+        type="file"
+        id="profileUpload"
+        accept="image/*"
+        hidden>
+
+    </div>
+
+    <div>
+
+        <h1 id="profileName">
+            User Name
+        </h1>
+
+        <p id="profileProfession">
+            Profession
+        </p>
+
+    </div>
+
+</section>
+
+        <!-- PROFILE INFO -->
+
+        <section class="profile-card">
+
+            <h2>
+
+                Personal Information
+
+            </h2>
+
+            <div class="info-grid">
+
+                <div class="info-item">
+
+                    <label>Name</label>
+
+                    <p id="userName">
+
+                        --
+
+                    </p>
+
+                </div>
+
+                <div class="info-item">
+
+                    <label>Email</label>
+
+                    <p id="userEmail">
+
+                        --
+
+                    </p>
+
+                </div>
+
+                <div class="info-item">
+
+                    <label>Profession</label>
+
+                    <p id="userProfession">
+
+                        --
+
+                    </p>
+
+                </div>
+
+                <div class="info-item">
+
+    <label>Current Streak</label>
+
+    <p id="profileStreak">
+
+        0 Days
+
+    </p>
+
+</div>
+
+                <div class="info-item">
+
+                    <label>Joined Date</label>
+
+                    <p id="joinedDate">
+
+                        --
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PRODUCTIVITY -->
+
+        <section class="stats-section">
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                <h2 id="totalTasks">
+
+                    0
+
+                </h2>
+
+                <p>Total Tasks</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h2 id="completedTasks">
+
+                    0
+
+                </h2>
+
+                <p>Completed</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h2 id="pendingTasks">
+
+                    0
+
+                </h2>
+
+                <p>Pending</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-fire"></i>
+
+                <h2 id="streakCount">
+
+                    0
+
+                </h2>
+
+                <p>Daily Streak</p>
+
+            </div>
+
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+
+        <section class="achievement-section">
+
+            <h2>
+
+                Achievements
+
+            </h2>
+
+            <div class="achievement-grid">
+
+                <div class="achievement-card">
+
+                    🏆 Productivity Hero
+
+                </div>
+
+                <div class="achievement-card">
+
+                    🚀 Goal Achiever
+
+                </div>
+
+                <div class="achievement-card">
+
+                    🔥 Consistency Master
+
+                </div>
+
+                <div class="achievement-card">
+
+                    ⚡ Task Champion
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- RIGHT PANEL -->
+
+    <aside class="right-panel">
+
+        <div class="profile-summary">
+
+            <h3>
+
+                Profile Summary
+
+            </h3>
+
+            <p>
+
+                Keep building productive habits and
+                complete tasks consistently to
+                improve your performance.
+
+            </p>
+
+        </div>
+
+        <div class="profile-summary">
+
+            <h3>
+
+                Current Goal
+
+            </h3>
+
+            <p id="goalMessage">
+
+                Stay Consistent 🚀
+
+            </p>
+
+        </div>
+
+        <div class="profile-summary">
+
+            <h3>
+
+                Productivity Score
+
+            </h3>
+
+            <div class="score-circle"
+            id="productivityScore">
+
+                0%
+
+            </div>
+
+        </div>
+
+    </aside>
+
+</div>
+
+<script type="module"
+src="../js/profile.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Settings | LifeSync Pro</title>
+
+<link rel="stylesheet"
+href="../css/settings.css">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<div class="settings-dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div>
+
+            <div class="logo">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <span>LifeSync Pro</span>
+
+            </div>
+
+            <nav class="menu">
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+
+                </a>
+
+                <a href="tasks.html">
+
+                    <i class="fa-solid fa-list-check"></i>
+                    Tasks
+
+                </a>
+
+                <a href="analytics.html">
+
+                    <i class="fa-solid fa-chart-line"></i>
+                    Analytics
+
+                </a>
+
+                <a href="profile.html">
+
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+
+                </a>
+
+                <a href="settings.html"
+                class="active">
+
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+
+                </a>
+
+            </nav>
+
+        </div>
+
+        <button id="logoutBtn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Logout
+
+        </button>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <div class="page-header">
+
+            <h1>
+
+                Account Settings
+
+            </h1>
+
+            <p>
+
+                Manage your profile, preferences and account information.
+
+            </p>
+
+        </div>
+
+        <!-- PROFILE SETTINGS -->
+
+        <section class="settings-card">
+
+            <h2>
+
+                Profile Information
+
+            </h2>
+
+            <div class="profile-upload">
+
+<img
+id="profilePreview"
+src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+alt="Profile">
+
+<label
+for="profileImage"
+class="upload-btn">
+
+<i class="fa-solid fa-camera"></i>
+Upload Photo
+
+</label>
+
+<input
+type="file"
+id="profileImage"
+accept="image/*">
+
+</div>
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label>
+
+                        Full Name
+
+                    </label>
+
+                    <input
+                    type="text"
+                    id="name">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+
+                        Email Address
+
+                    </label>
+
+                    <input
+                    type="email"
+                    id="email">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+
+                        Profession
+
+                    </label>
+
+                    <select
+                    id="profession">
+
+                        <option>
+                            Student
+                        </option>
+
+                        <option>
+                            Developer
+                        </option>
+
+                        <option>
+                            Homemaker
+                        </option>
+
+                        <option>
+                            Bank Employee
+                        </option>
+
+                        <option>
+                            Vendor
+                        </option>
+
+                        <option>
+                            Teacher
+                        </option>
+
+                        <option>
+                            Freelancer
+                        </option>
+
+                        <option>
+                            Manager
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+
+                        New Password
+
+                    </label>
+
+                    <input
+                    type="password"
+                    id="password">
+
+                </div>
+
+            </div>
+
+            <button
+            id="saveBtn"
+            class="save-btn">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Save Changes
+
+            </button>
+
+        </section>
+
+        <!-- APPEARANCE -->
+
+        <section class="settings-card">
+
+            <h2>
+
+                Appearance
+
+            </h2>
+
+            <div class="theme-box">
+
+                <div>
+
+                    <h3>
+
+                        Dark Mode
+
+                    </h3>
+
+                    <p>
+
+                        Switch between light and dark theme.
+
+                    </p>
+
+                </div>
+
+                <label class="switch">
+
+                    <input
+                    type="checkbox"
+                    id="themeToggle">
+
+                    <span
+                    class="slider">
+
+                    </span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+        <!-- ACCOUNT INFO -->
+
+        <section class="settings-card">
+
+            <h2>
+
+                Account Information
+
+            </h2>
+
+            <div class="account-info">
+
+                <p>
+
+                    Member Since:
+
+                    <strong
+                    id="joinedDate">
+
+                    </strong>
+
+                </p>
+
+                <p>
+
+                    Current Profession:
+
+                    <strong
+                    id="currentProfession">
+
+                    </strong>
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- DANGER ZONE -->
+
+        <section class="danger-card">
+
+            <h2>
+
+                Danger Zone
+
+            </h2>
+
+            <p>
+
+                Permanently remove your account and all associated data.
+
+            </p>
+
+            <button
+            id="deleteAccountBtn">
+
+                <i class="fa-solid fa-trash"></i>
+
+                Delete Account
+
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script
+type="module"
+src="../js/settings.js">
+</script>
+
+</body>
+</html>
